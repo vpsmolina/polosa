@@ -1,0 +1,26 @@
+@import "../vars";
+
+.nav {
+    /*padding: 12px;*/
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav__link {
+    padding: 10px;
+    border-radius: $radius;
+    text-decoration: none;
+    color: $black;
+    background: $white;
+
+    transition: background .1s linear;
+
+    &:hover {
+        background: $gray;
+    }
+    &.active {
+        color: $white;
+        background-color: $mustard;
+    }
+}
+

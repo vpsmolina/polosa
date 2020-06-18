@@ -1,0 +1,25 @@
+.social {
+  display: flex;
+  align-items: center;
+}
+.social__text {
+  margin-right: 20px;
+  color: $black;
+  font-size: 12px;
+  font-weight: 600;
+}
+.social__link {
+  &:hover .social__icon {
+    fill: $black;
+  }
+}
+.social__icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+
+  fill: $gray;
+
+  transition: fill 0.1s linear;
+}
+

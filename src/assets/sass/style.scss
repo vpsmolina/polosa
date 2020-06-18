@@ -1,0 +1,36 @@
+/*Blocks*/
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/content";
+@import "blocks/footer";
+@import "blocks/social";
+@import "blocks/modal";
+@import "blocks/form";
+@import "blocks/input";
+@import "blocks/btn";
+@import "blocks/aside";
+@import "blocks/future";
+
+
+/*Vendor libs*/
+@import "vendor/slick";
+
+
+
+@import "vars";
+
+body {
+    margin: 0;
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sansSerif, "Apple Color Emogji", "Segoe UI Emoji";
+    color: $black;
+    line-height: 1.5;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}

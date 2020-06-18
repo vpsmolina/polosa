@@ -1,0 +1,26 @@
+@import "../vars";
+
+.aside {
+  width: 20%;
+
+  @media (max-width: 575px) {
+    display: none;
+
+  }
+}
+
+.aside__new {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.aside__title {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 500;
+  color: $mustard;
+}

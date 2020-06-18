@@ -1,0 +1,93 @@
+@import "../vars";
+/* свойства модального окна по умолчанию */
+.modal {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5); /* цвет фона */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+  opacity: 1; /* делаем окно видимым */
+  pointer-events: auto; /* элемент видим для событий мыши */
+  overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal__dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  transform: translate(-50%,-50%);
+
+  @media (min-width: 576px) {
+      max-width: 500px;
+      margin: 30px auto; /* для отображения модального окна по центру */
+  }
+}
+
+
+.modal__content {
+  padding: 30px;
+  position: relative;
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: $shadow;
+  outline: 0;
+}
+
+.modal__close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  z-index: 1;
+
+  color: $white;
+  text-decoration: none;
+
+  transition: transform .2s linear;
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    outline: 0;
+    transform: rotate(180deg);
+
+  }
+}
+
+.modal__close--icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  fill: $white;
+}
+
+.modal__title {
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 500;
+  color: $mustard;
+}
+
+.modal__text {
+  margin-bottom: 30px;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $black;
+}

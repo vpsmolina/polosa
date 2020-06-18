@@ -1,0 +1,29 @@
+@import "../vars";
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 30px;
+
+    background: none;
+    border: 0;
+    border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 500;
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: background .1s linear, color .1s linear;
+
+  &--mustard {
+    border: 2px solid $mustard;
+
+    &:hover {
+      color: $white;
+      background-color: $mustard;
+    }
+  }
+}
