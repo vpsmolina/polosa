@@ -1,0 +1,84 @@
+.future {
+  position: relative;
+  padding: 20px 30px 40px;
+
+  box-shadow: $shadow;
+  background-color: $white;
+}
+
+.future__title {
+  padding-left: 20px;
+  margin-bottom: 30px;
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: 700;
+  color: $emerald;
+}
+.future__arrow {
+  padding: 0;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  transform: translateY(50%);
+
+  &:hover {
+    .future__arrow-icon {
+      fill: $mustard;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--prev {
+    left: 10px
+  }
+  &--next {
+    right: 10px
+  }
+}
+
+.future__arrow-icon {
+  width: 20px;
+  height: 30px;
+
+  fill: $gray;
+
+  transition: fill .1s linear;
+
+}
+
+.future__slider {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background: $white
+    url("../../assets/img/ajax-loader.gif") center no-repeat;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  &.slick-initialized {
+    overflow: visible;
+    &:after {
+      display: none;
+    }
+  }
+}
