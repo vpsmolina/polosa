@@ -1,6 +1,6 @@
 # Polosa
 
-Gulp, JS, html, SASS.
+Gulp, JS, html, SASS, flexbox.
 
 В проекте используется - slick-слайдер, svg вместо иконок. 
 
